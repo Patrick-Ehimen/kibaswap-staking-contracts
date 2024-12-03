@@ -1,5 +1,26 @@
 // SPDX-License-Identifier: MIT
 
+/**
+ * 
+ ██████╗ ██╗  ██╗ ██████╗ ███████╗███████╗
+██╔═████╗╚██╗██╔╝██╔═══██╗██╔════╝██╔════╝
+██║██╔██║ ╚███╔╝ ██║   ██║███████╗█████╗  
+████╔╝██║ ██╔██╗ ██║   ██║╚════██║██╔══╝  
+╚██████╔╝██╔╝ ██╗╚██████╔╝███████║███████╗
+ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+ */
+
+/**
+ * @title KibaRewardToken
+ * @dev ERC20 token for Kiba Rewards, with minting and burning capabilities.
+ * 
+ * This contract is designed to manage the Kiba Rewards Token (KRT) for the Kiba ecosystem.
+ * It includes functionality for minting new tokens, transferring tokens safely, and burning tokens.
+ * 
+ * @author 0xose
+ * @version 1.0
+ */
+
 pragma solidity ^0.8.20;
 
 import {Ownable} from 'openzeppelin-contracts/contracts/access/Ownable.sol';
@@ -12,11 +33,6 @@ import {IERC20} from 'openzeppelin-contracts/contracts/token/ERC20/IERC20.sol';
 import {SafeERC20} from 'openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol';
 import {ERC20Burnable} from 'openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Burnable.sol';
 
-
-/**
- * @title KibaRewardToken
- * @dev ERC20 token for Kiba Rewards, with minting and burning capabilities.
- */
 contract KibaRewardToken is ERC20, ERC20Burnable, Ownable, AccessControl {
     using SafeMath for uint256;
     using SafeERC20 for ERC20;
